@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(210, 46%, 95%);
+    color: hsl(0, 0%, 81%);    
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 10vh auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+        "test-1 test-1 test-2 test-3"
+        "test-4 test-5 test-5 test-3";
+}
+
+.grid {
+    border-radius: 7px;
+    padding: 30px;
+    box-shadow: 0px 4px 10px hsla(219, 29%, 14%, 0.2);
+}
+
+.testi-1 {
+    grid-area: test-1;
+    background: url('images/bg-pattern-quotation.svg') top right 40px no-repeat hsl(263, 55%, 52%);
+    color: hsl(0, 0%, 81%);
+}
+
+.testi-2 {
+    background-color: hsl(217, 19%, 35%);
+    grid-area: test-2;
+}
+
+.testi-3 {
+    background-color: hsl(0, 0%, 100%);
+    grid-area: test-3;
+    color: hsl(217, 19%, 35%);
+}
+
+.testi-4 {
+    background-color: hsl(0, 0%, 100%);
+    grid-area: test-4;
+    color: hsl(217, 19%, 35%);
+}
+
+.testi-5 {
+    background-color: hsl(219, 29%, 14%);
+    grid-area: test-5;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.pro-img {
+    border-radius: 50%;
+}
+
+.intro {
+    margin-left: 20px;
+}
+
+.verified {
+    opacity: 0.7; 
+}
+
+.desc-title {
+    font-size: 1.2rem;
+    margin-top: 30px;
+}
+
+.description {
+    font-size: 0.8rem;
+    margin-top: 30px;
+    opacity: 0.7;
+}
+
+@media (max-width: 1260px) {
+    main {
+        width: 90%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "test-1 test-1 test-2"
+            "test-4 test-5 test-5" 
+            "test-3 test-3 test-3";
+    }
+}
+
+@media (max-width: 860px) {
+    main {
+        width: 60%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-areas: 
+            "test-1"
+            "test-2"
+            "test-3"
+            "test-4"
+            "test-5";
+    }
+}
+
+@media (max-width: 650px) {
+    main {
+        width: 80%;
+    }
+}
+
+@media (max-width: 450px) {
+    .testi-1 {
+        background-size: 50px;
+        background-position: top 30px right 50px;
+    }
+}
+
+@media (max-width: 370px) {
+    .testi-1 {
+        background-size: 50px;
+        background-position: top 30px right 30px;
+    }
+}
